@@ -7,7 +7,7 @@ export default function About() {
           <strong className="font-black text-6xl"> Neha Nikhat</strong>
         </h1>
         <h3 className="my-4 px-4 rounded-2xl bg-gray-200 bg-opacity-75 font-bold text-3xl text-right">
-          Front-end Developer
+          Web Developer
         </h3>
       </div>
     </div>
