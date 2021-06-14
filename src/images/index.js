@@ -4,7 +4,7 @@ const IMAGES = {
 
   html: require("./html.png").default,
   css: require("./css.png").default,
-  tailwind: require("./tailwind.PNG").default,
+  tailwind: require("./tailwind.jpg").default,
   react: require("./react.png").default,
   js: require("./js.png").default,
   nodejs: require("./nodejs.png").default,
