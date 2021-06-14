@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { scroller } from "react-scroll";
-import menu from "../../images/menu.png";
-import close from "../../images/close.png";
+import IMAGES from "../../images/index";
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false);
@@ -51,7 +50,7 @@ export default function Navbar() {
             }}
             className="absolute right-0 m-2 px-1 rounded-lg hover:bg-gray-300"
           >
-            <img className="w-8" src={close} alt="close"></img>
+            <img className="w-8" src={IMAGES.close} alt="close"></img>
           </button>
 
           <div>{links.map((item) => renderItem(item))}</div>
@@ -63,7 +62,7 @@ export default function Navbar() {
           }}
           className="fixed top-0 right-0 m-2 px-1 rounded-lg bg-gray-100 hover:bg-gray-300"
         >
-          <img className="w-10" src={menu} alt="menu"></img>
+          <img className="w-10" src={IMAGES.menu} alt="menu"></img>
         </button>
       )}
     </div>
