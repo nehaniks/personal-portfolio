@@ -10,6 +10,9 @@ const IMAGES = {
   nodejs: require("./nodejs.png").default,
   firebase: require("./firebase.png").default,
   git: require("./git.png").default,
+
+  open: require("./open.png").default,
+  repo: require("./repo.png").default,
 };
 
 export default IMAGES;

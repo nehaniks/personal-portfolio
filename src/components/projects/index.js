@@ -2,6 +2,8 @@ import the_venue_1 from "../../images/projects/the_venue/the_venue_1.png";
 import the_venue_2 from "../../images/projects/the_venue/the_venue_2.png";
 import ipl_1 from "../../images/projects/ipl/ipl_1.png";
 
+import Details from "./details";
+
 export default function Projects() {
   return (
     <div>
@@ -10,7 +12,7 @@ export default function Projects() {
       </h1>
       <div className="my-8 grid grid-cols-2">
         <div className="mx-8 mb-12">
-          <img src={the_venue_1} alt="the venue" />
+          <Details />
         </div>
         <div className="mx-8 mb-12">
           <img src={the_venue_2} alt="the venue" />
