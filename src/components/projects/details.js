@@ -1,5 +1,6 @@
 import { useState } from "react";
 import IMAGES from "../../images/index";
+import Carrousel from "./carrousel";
 
 export default function Details(props) {
   const [isHidden, setIsHidden] = useState(true);
@@ -15,24 +16,18 @@ export default function Details(props) {
   return (
     <div onMouseEnter={() => shrink()} onMouseLeave={() => expand()}>
       {isHidden ? (
-        <img
-          src={IMAGES[props.projectName][props.slides[0]]}
-          alt={props.slides[0]}
-        />
+        <Carrousel projectName={props.projectName} slides={props.slides} />
       ) : (
         <div className="p-2 grid grid-cols-2 bg-gray-200">
           <div>
-            <img
-              src={IMAGES[props.projectName][props.slides[0]]}
-              alt={props.slides[0]}
-            />
+            <Carrousel projectName={props.projectName} slides={props.slides} />
           </div>
           <div className="mx-1 flex flex-col">
             <a
               className="mb-2 flex flex-row justify-evenly"
               href={props.projectLink}
             >
-              <span className="text-center">View Project</span>
+              <span className="font-semibold text-center">View Project</span>
               <img
                 className="mt-1 p-1 w-12 h-12 rounded-sm bg-gray-100"
                 src={IMAGES.open}
@@ -43,7 +38,7 @@ export default function Details(props) {
               className="mt-2 flex flex-row justify-evenly"
               href={props.repoLink}
             >
-              <span className="text-center">Project Repo</span>
+              <span className="font-semibold text-center">Project Repo</span>
 
               <img
                 className="mt-1 p-1 w-12 h-12 rounded-sm bg-gray-100"
@@ -71,7 +66,7 @@ export default function Details(props) {
             </div>
           </div>
           <div className="mt-2 col-span-2">
-            <h1 className="text-xl">Description:</h1>
+            <h1 className="font-semibold text-xl">Description:</h1>
             <p className="mt-1 text-md">{props.description}</p>
           </div>
         </div>
