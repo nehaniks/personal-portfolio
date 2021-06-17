@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "projectName": "the_venue",
+        "skills": ["html", "css", "react"],
+        "description": "Landing page with picture caroussel, countdown timer, navigation bar, google location finder",
+        "projectLink": "",
+        "repoLink": "https://github.com/nehaniks/the_venue",
+        "images": ["the_venue_1","the_venue_2","the_venue_3","the_venue_4","the_venue_5","the_venue_6"]
+    },
+    {
+        "id": 2,
+        "projectName": "ipl",
+        "skills": ["html", "nodejs", "js"],
+        "description": "IPL data visualization based on certain queries using highcharts data visualization based on certain queries using highcharts",
+        "projectLink": "https://shrouded-forest-34638.herokuapp.com/",
+        "repoLink": "",
+        "images": ["ipl_1","ipl_2","ipl_3","ipl_4","ipl_5","ipl_6"]
+
+    }
+]

@@ -1,7 +1,4 @@
-import the_venue_1 from "../../images/projects/the_venue/the_venue_1.png";
-import the_venue_2 from "../../images/projects/the_venue/the_venue_2.png";
-import ipl_1 from "../../images/projects/ipl/ipl_1.png";
-
+import Data from "../..//data.json";
 import Details from "./details";
 
 export default function Projects() {
@@ -11,15 +8,20 @@ export default function Projects() {
         <strong>MY PROJECTS</strong>
       </h1>
       <div className="my-8 grid grid-cols-2">
-        <div className="mx-8 mb-12">
-          <Details />
-        </div>
-        <div className="mx-8 mb-12">
-          <img src={the_venue_2} alt="the venue" />
-        </div>
-        <div className="mx-8 mb-12">
-          <img src={ipl_1} alt="ipl" />
-        </div>
+        {Data.map((project) => {
+          return (
+            <div className="mx-8 mb-12 h-auto">
+              <Details
+                projectName={project.projectName}
+                slides={project.images}
+                projectLink={project.projectLink}
+                repoLink={project.repoLink}
+                skills={project.skills}
+                description={project.description}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
