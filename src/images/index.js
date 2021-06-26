@@ -31,6 +31,10 @@ const IMAGES = {
     ipl_5: require("./projects/ipl/ipl_5.png").default,
     ipl_6: require("./projects/ipl/ipl_6.png").default,
   },
+
+  linkedin: require("./linkedin.png").default,
+  mail: require("./mail.png").default,
+  download: require("./download.png").default,
 };
 
 export default IMAGES;
