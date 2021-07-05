@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 import IMAGES from "../../images/index";
 
 export default function Carrousel(props) {
@@ -6,13 +7,16 @@ export default function Carrousel(props) {
   const length = props.slides.length - 1;
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       if (current === length) {
         setCurrent(0);
       } else {
         setCurrent((prevCount) => prevCount + 1);
       }
     }, 3000);
+    return () => {
+      clearTimeout(timer);
+    };
   }, [current]);
 
   return (
@@ -21,7 +25,9 @@ export default function Carrousel(props) {
         return (
           <div key={index}>
             {index === current && (
-              <img src={IMAGES[props.projectName][slide]} alt={slide}></img>
+              <Fade duration="2000">
+                <img src={IMAGES[props.projectName][slide]} alt={slide}></img>
+              </Fade>
             )}
           </div>
         );

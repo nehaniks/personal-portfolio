@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Fade } from "react-awesome-reveal";
 
 export default function Progress(props) {
   const [offset, setOffset] = useState(0);
@@ -31,9 +32,11 @@ export default function Progress(props) {
   }, [progress]);
 
   return (
-    <div
-      onMouseOver={() => {
-        beginProgress();
+    <Fade
+      onVisibilityChange={(inView) => {
+        if (inView) {
+          beginProgress();
+        }
       }}
     >
       <svg fill="#F3F4F6" width="120" height="120">
@@ -60,6 +63,6 @@ export default function Progress(props) {
       <div className="my-2 flex justify-center font-bold text-xl">
         <h3>{progress}%</h3>
       </div>
-    </div>
+    </Fade>
   );
 }
