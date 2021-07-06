@@ -13,12 +13,12 @@ const mousePosition = ({ nativeEvent }) => {
   mouse.y = nativeEvent.offsetY;
 };
 
-function particle(canvas, fontSize) {
+function particle(canvas, color, fontSize) {
   const context = canvas.getContext("2d");
 
   context.clearRect(0, 0, canvas.width, canvas.height);
 
-  context.fillStyle = "#111827";
+  context.fillStyle = color;
   context.font = `900 ${fontSize}rem Nunito`;
   context.fillText("Neha", `${fontSize * 4}`, `${canvas.height * 0.4}`);
   context.fillText("Nikhat", `${fontSize * 4}`, `${canvas.height * 0.82}`);
@@ -41,7 +41,12 @@ function particle(canvas, fontSize) {
     }
 
     draw() {
-      context.fillStyle = "#111827";
+      if (localStorage.theme === "light") {
+        color = "#111827";
+      } else {
+        color = "white";
+      }
+      context.fillStyle = color;
       context.beginPath();
       context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       context.closePath();
@@ -126,13 +131,13 @@ export default function PixelEffect() {
 
   const resized = () => {
     dimension();
-    particle(canvasRef.current, fontSize);
+    particle(canvasRef.current, "#111827", fontSize);
     console.log(canvasRef.current.height);
   };
 
   useEffect(() => {
     dimension();
-    particle(canvasRef.current, fontSize);
+    particle(canvasRef.current, "#111827", fontSize);
 
     window.addEventListener("resize", resized);
     return () => window.removeEventListener("resize", resized);

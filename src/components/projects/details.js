@@ -22,7 +22,7 @@ export default function Details(props) {
       {isHidden ? (
         <Carrousel projectName={props.projectName} slides={props.slides} />
       ) : (
-        <div className="p-2 grid grid-cols-2 bg-gray-200">
+        <div className="p-2 grid grid-cols-2 bg-gray-200 dark:bg-gray-800">
           <div>
             <Carrousel projectName={props.projectName} slides={props.slides} />
           </div>

@@ -3,7 +3,7 @@ import PDF from "../../pdf/Neha_Nikhat.pdf";
 
 export default function Contact() {
   return (
-    <div className="w-screen h-40 flex items-center justify-evenly bg-gray-200">
+    <div className="w-screen h-40 flex items-center justify-evenly bg-gray-200 dark:bg-gray-800">
       <div className="flex flex-col items-center m-2 md:m-2">
         <h3 className="text-center text-sm md:text-xl">Check my profile at:</h3>
         <a

@@ -34,7 +34,7 @@ export default function Navbar() {
 
   const renderItem = (item) => (
     <h1
-      className="my-12 p-2 mr-2 font-black text-2xl md:text-4xl text-gray-900 hover:bg-white cursor-pointer rounded-r-3xl"
+      className="my-12 p-2 mr-2 font-black text-2xl md:text-4xl text-gray-900 dark:hover:text-white hover:bg-white dark:hover:bg-gray-900 cursor-pointer rounded-r-3xl"
       button
       onClick={() => scrollToElement(item.where)}
       key={item.where}
