@@ -42,14 +42,12 @@ export default function Progress(props) {
       <svg fill="#F3F4F6" width="120" height="120">
         <circle
           className="bg-blend-normal"
-          stroke=""
           cx={center}
           cy={center}
           r={radius}
           strokeWidth="10"
         />
         <circle
-          className=""
           ref={circleRef}
           stroke={props.color}
           cx={center}

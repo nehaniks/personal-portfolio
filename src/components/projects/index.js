@@ -3,14 +3,14 @@ import Details from "./details";
 
 export default function Projects() {
   return (
-    <div>
-      <h1 className="flex items-center justify-center font-black text-3xl">
+    <div className="mx-auto min-h-screen">
+      <h1 className="mb-8 flex items-center justify-center font-black text-3xl">
         <strong>MY PROJECTS</strong>
       </h1>
-      <div className="my-8 grid grid-cols-2">
+      <div className="p-4 mx-4 grid grid-rows-1 lg:grid-cols-2 gap-8">
         {Data.map((project) => {
           return (
-            <div className="mx-8 mb-12 h-auto" key={project.id}>
+            <div key={project.id}>
               <Details
                 projectName={project.projectName}
                 slides={project.images}

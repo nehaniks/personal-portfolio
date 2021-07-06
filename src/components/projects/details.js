@@ -14,7 +14,11 @@ export default function Details(props) {
   };
 
   return (
-    <div onMouseEnter={() => shrink()} onMouseLeave={() => expand()}>
+    <div
+      onMouseEnter={() => shrink()}
+      onMouseLeave={() => expand()}
+      className="lg:h-72 xl:h-80"
+    >
       {isHidden ? (
         <Carrousel projectName={props.projectName} slides={props.slides} />
       ) : (
@@ -22,26 +26,26 @@ export default function Details(props) {
           <div>
             <Carrousel projectName={props.projectName} slides={props.slides} />
           </div>
-          <div className="mx-1 flex flex-col">
+          <div className="mx-1 flex flex-row md:flex-col">
             <a
-              className="mb-2 flex flex-row justify-evenly"
+              className="md:mb-2 flex flex-col items-center md:flex-row md:justify-evenly"
               href={props.projectLink}
             >
               <span className="font-semibold text-center">View Project</span>
               <img
-                className="mt-1 p-1 w-12 h-12 rounded-sm bg-gray-100"
+                className="mt-1 p-1 w-10 h-10 md:w-12 md:h-12 rounded-sm bg-gray-100"
                 src={IMAGES.open}
                 alt="Open Project"
               />
             </a>
             <a
-              className="mt-2 flex flex-row justify-evenly"
+              className="md:mt-2 flex flex-col items-center md:flex-row md:justify-evenly"
               href={props.repoLink}
             >
               <span className="font-semibold text-center">Project Repo</span>
 
               <img
-                className="mt-1 p-1 w-12 h-12 rounded-sm bg-gray-100"
+                className="mt-1 p-1 w-10 h-10 md:w-12 md:h-12 rounded-sm bg-gray-100"
                 src={IMAGES.repo}
                 alt="Repository"
               />
@@ -66,7 +70,7 @@ export default function Details(props) {
             </div>
           </div>
           <div className="mt-2 col-span-2">
-            <h1 className="font-semibold text-xl">Description:</h1>
+            <h1 className="font-semibold text-lg md:text-xl">Description:</h1>
             <p className="mt-1 text-md">{props.description}</p>
           </div>
         </div>
