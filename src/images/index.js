@@ -1,6 +1,8 @@
 const IMAGES = {
   menu: require("./menu.png").default,
   close: require("./close.png").default,
+  light: require("./light.png").default,
+  dark: require("./dark.png").default,
 
   html: require("./html.png").default,
   css: require("./css.png").default,

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { scroller } from "react-scroll";
+import useDarkMode from "../../hooks/useDarkMode";
 import IMAGES from "../../images/index";
 
 export default function Navbar() {
+  const [colorTheme, setTheme] = useDarkMode();
+
   const [showNav, setShowNav] = useState(false);
 
   const links = [
@@ -42,6 +45,24 @@ export default function Navbar() {
 
   return (
     <div className="fixed w-screen h-16 z-50">
+      <div
+        className="fixed top-0 left-0 m-2 text-2xl"
+        onClick={() => setTheme(colorTheme)}
+      >
+        {colorTheme === "light" ? (
+          <img
+            className="w-10 p-2 rounded-full bg-gray-100"
+            src={IMAGES.light}
+            alt="light"
+          ></img>
+        ) : (
+          <img
+            className="w-10 p-2 rounded-full bg-gray-100"
+            src={IMAGES.dark}
+            alt="dark"
+          ></img>
+        )}
+      </div>
       {showNav ? (
         <div className="fixed right-0 z-50 w-1/2 md:w-1/5 h-screen bg-gray-200">
           <button
