@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 let particleArray = [];
 
@@ -13,15 +13,15 @@ const mousePosition = ({ nativeEvent }) => {
   mouse.y = nativeEvent.offsetY;
 };
 
-function particle(canvas) {
+function particle(canvas, fontSize) {
   const context = canvas.getContext("2d");
 
   context.clearRect(0, 0, canvas.width, canvas.height);
 
   context.fillStyle = "#111827";
-  context.font = "900 4rem Nunito";
-  context.fillText("Neha", "10", "50");
-  context.fillText("Nikhat", "10", "110");
+  context.font = `900 ${fontSize}rem Nunito`;
+  context.fillText("Neha", `${fontSize * 4}`, `${canvas.height * 0.4}`);
+  context.fillText("Nikhat", `${fontSize * 4}`, `${canvas.height * 0.82}`);
 
   const textCoordinates = context.getImageData(
     0,
@@ -106,11 +106,36 @@ function particle(canvas) {
 
 export default function PixelEffect() {
   const canvasRef = useRef(null);
+  var [fontSize, setFontSize] = useState(0);
+
+  const dimension = () => {
+    if (window.innerWidth > 768) {
+      canvasRef.current.width = 550;
+      canvasRef.current.height = 150;
+      setFontSize(4);
+    } else if (window.innerWidth > 640) {
+      canvasRef.current.width = 300;
+      canvasRef.current.height = 125;
+      setFontSize(3);
+    } else if (window.innerWidth < 640) {
+      canvasRef.current.width = 150;
+      canvasRef.current.height = 100;
+      setFontSize(2.25);
+    }
+  };
+
+  const resized = () => {
+    dimension();
+    particle(canvasRef.current, fontSize);
+    console.log(canvasRef.current.height);
+  };
 
   useEffect(() => {
-    canvasRef.current.width = 550;
-    canvasRef.current.height = 150;
-    particle(canvasRef.current);
+    dimension();
+    particle(canvasRef.current, fontSize);
+
+    window.addEventListener("resize", resized);
+    return () => window.removeEventListener("resize", resized);
   });
 
   return (
