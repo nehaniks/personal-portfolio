@@ -1,6 +1,15 @@
 [
     {
         "id": 1,
+        "projectName": "portfolio",
+        "skills": ["html", "tailwind", "react"],
+        "description": "Personal portfolio website",
+        "projectLink": "",
+        "repoLink": "",
+        "images": ["portfolio_1","portfolio_2","portfolio_3","portfolio_4","portfolio_5"]
+    },
+    {
+        "id": 2,
         "projectName": "the_venue",
         "skills": ["html", "css", "react"],
         "description": "Landing page with picture caroussel, countdown timer, navigation bar, google location finder",
@@ -9,7 +18,17 @@
         "images": ["the_venue_1","the_venue_2","the_venue_3","the_venue_4","the_venue_5","the_venue_6"]
     },
     {
-        "id": 2,
+        "id": 3,
+        "projectName": "instagram",
+        "skills": ["html", "tailwind", "react", "firebase"],
+        "description": "Instagram clone",
+        "projectLink": "",
+        "repoLink": "",
+        "images": ["instagram_1","instagram_2","instagram_3","instagram_4","instagram_5"]
+
+    },
+    {
+        "id": 3,
         "projectName": "ipl",
         "skills": ["html", "nodejs", "js"],
         "description": "IPL data visualization based on certain queries using highcharts data visualization based on certain queries using highcharts",
