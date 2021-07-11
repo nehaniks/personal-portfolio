@@ -41,11 +41,6 @@ function particle(canvas, color, fontSize) {
     }
 
     draw() {
-      if (localStorage.theme === "light") {
-        color = "#111827";
-      } else {
-        color = "white";
-      }
       context.fillStyle = color;
       context.beginPath();
       context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -102,6 +97,12 @@ function particle(canvas, color, fontSize) {
     for (let i = 0; i < particleArray.length; i++) {
       particleArray[i].draw();
       particleArray[i].update();
+
+      if (localStorage.theme === "dark") {
+        color = "white";
+      } else {
+        color = "#111827";
+      }
     }
     requestAnimationFrame(animate);
   };
