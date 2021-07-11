@@ -59,6 +59,7 @@ export default function Details(props) {
                 className="flex justify-center"
                 href={props.projectLink}
                 target="_blank"
+                rel="noreferrer"
               >
                 <img
                   className="mt-1 p-1 w-8 h-8 xs:w-12 xs:h-12 rounded-sm"
@@ -76,6 +77,7 @@ export default function Details(props) {
                 className="flex justify-center"
                 href={props.repoLink}
                 target="_blank"
+                rel="noreferrer"
               >
                 <img
                   className="mt-1 p-1 w-8 h-8 xs:w-12 xs:h-12 rounded-sm"

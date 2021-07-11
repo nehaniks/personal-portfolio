@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 
 export default function Progress(props) {
-  const [offset, setOffset] = useState(0);
-  const circleRef = useRef(null);
   const [progress, setProgress] = useState(0);
+  const [offset, setOffset] = useState(0);
   const end = props.value;
 
   const center = 120 / 2;
@@ -21,7 +20,7 @@ export default function Progress(props) {
     if (progress > 0 && progress < end) {
       setTimeout(() => {
         setProgress((prevCount) => prevCount + 1);
-      }, 10);
+      }, 1);
 
       const progressOffset = ((100 - progress) / 100) * circumference;
       setOffset(progressOffset);
@@ -29,7 +28,7 @@ export default function Progress(props) {
       const progressOffset = ((100 - progress) / 100) * circumference;
       setOffset(progressOffset);
     }
-  }, [progress]);
+  }, [progress, circumference, end]);
 
   return (
     <Fade
@@ -48,7 +47,6 @@ export default function Progress(props) {
           strokeWidth="10"
         />
         <circle
-          ref={circleRef}
           stroke={props.color}
           cx={center}
           cy={center}

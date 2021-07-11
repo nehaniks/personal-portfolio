@@ -7,7 +7,7 @@ export default function Projects() {
       <h1 className="mb-2 md:mb-8 flex items-center justify-center font-black text-3xl">
         <strong>MY PROJECTS</strong>
       </h1>
-      <div className="p-4 mx-4 grid grid-rows-1 lg:grid-cols-2 md:gap-8">
+      <div className="p-4 md:mx-auto lg:mx-4 grid grid-rows-1 md:w-3/4 lg:w-auto lg:grid-cols-2 md:gap-8">
         {Data.map((project) => {
           return (
             <div key={project.id} className="p-4">

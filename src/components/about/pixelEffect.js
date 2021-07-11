@@ -132,7 +132,6 @@ export default function PixelEffect() {
   const resized = () => {
     dimension();
     particle(canvasRef.current, "#111827", fontSize);
-    console.log(canvasRef.current.height);
   };
 
   useEffect(() => {

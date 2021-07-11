@@ -17,7 +17,7 @@ export default function Carrousel(props) {
     return () => {
       clearTimeout(timer);
     };
-  }, [current]);
+  }, [current, length]);
 
   return (
     <div>
