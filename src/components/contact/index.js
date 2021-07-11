@@ -9,6 +9,7 @@ export default function Contact() {
         <a
           className="my-2 w-10 h-10 md:w-16 md:h-16 rounded-xl bg-gray-100"
           href="https://www.linkedin.com/in/neha-nikhat-5027a4141"
+          target="_blank"
         >
           <img className="rounded-xl" src={IMAGES.linkedin} alt="linkedin" />
         </a>
@@ -19,6 +20,7 @@ export default function Contact() {
         <a
           className="my-2 w-10 h-10 md:w-16 md:h-16 rounded-xl bg-gray-100"
           href="mailto: nehanikhat20@gmail.com"
+          target="_blank"
         >
           <img src={IMAGES.mail} alt="mail" />
         </a>
@@ -29,6 +31,7 @@ export default function Contact() {
         <a
           className="my-2 w-10 h-10 md:w-16 md:h-16 rounded-xl bg-gray-100"
           href={PDF}
+          target="_blank"
         >
           <img src={IMAGES.download} alt="mail" />
         </a>

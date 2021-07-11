@@ -55,7 +55,11 @@ export default function Details(props) {
               <span className="font-thin sm:font-semibold text-center text-black">
                 View Project
               </span>
-              <a className="flex justify-center" href={props.projectLink}>
+              <a
+                className="flex justify-center"
+                href={props.projectLink}
+                target="_blank"
+              >
                 <img
                   className="mt-1 p-1 w-8 h-8 xs:w-12 xs:h-12 rounded-sm"
                   src={IMAGES.open}
@@ -68,7 +72,11 @@ export default function Details(props) {
               <span className="font-thin sm:font-semibold text-center text-black">
                 Project Repo
               </span>
-              <a className="flex justify-center" href={props.repoLink}>
+              <a
+                className="flex justify-center"
+                href={props.repoLink}
+                target="_blank"
+              >
                 <img
                   className="mt-1 p-1 w-8 h-8 xs:w-12 xs:h-12 rounded-sm"
                   src={IMAGES.repo}

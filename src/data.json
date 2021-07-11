@@ -3,17 +3,17 @@
         "id": 1,
         "projectName": "portfolio",
         "skills": ["html", "tailwind", "react"],
-        "description": "Personal portfolio website",
+        "description": "Personal portfolio website using tailwind-css with responsive design, light/dark mode and canvas with pixel effect",
         "projectLink": "",
-        "repoLink": "",
+        "repoLink": "https://github.com/nehaniks/personal-portfolio",
         "images": ["portfolio_1","portfolio_2","portfolio_3","portfolio_4","portfolio_5"]
     },
     {
         "id": 2,
         "projectName": "the_venue",
         "skills": ["html", "css", "react"],
-        "description": "Landing page with picture caroussel, countdown timer, navigation bar, google location finder",
-        "projectLink": "",
+        "description": "Landing page with picture caroussel, countdown timer, navigation bar and google location finder",
+        "projectLink": "https://nifty-wozniak-28393c.netlify.app/",
         "repoLink": "https://github.com/nehaniks/the_venue",
         "images": ["the_venue_1","the_venue_2","the_venue_3","the_venue_4","the_venue_5","the_venue_6"]
     },
@@ -21,9 +21,9 @@
         "id": 3,
         "projectName": "instagram",
         "skills": ["html", "tailwind", "react", "firebase"],
-        "description": "Instagram clone",
-        "projectLink": "",
-        "repoLink": "",
+        "description": "Instagram clone using tailwind-css with responsive design and firebase auth, firestore and storage",
+        "projectLink": "https://sleepy-ravine-89528.herokuapp.com/",
+        "repoLink": "https://github.com/nehaniks/instagram_clone",
         "images": ["instagram_1","instagram_2","instagram_3","instagram_4","instagram_5"]
 
     },
@@ -31,9 +31,9 @@
         "id": 3,
         "projectName": "ipl",
         "skills": ["html", "nodejs", "js"],
-        "description": "IPL data visualization based on certain queries using highcharts data visualization based on certain queries using highcharts",
+        "description": "IPL data visualization based on certain queries using highcharts data visualization and json data",
         "projectLink": "https://shrouded-forest-34638.herokuapp.com/",
-        "repoLink": "",
+        "repoLink": "https://github.com/nehaniks/ipl",
         "images": ["ipl_1","ipl_2","ipl_3","ipl_4","ipl_5","ipl_6"]
 
     }
