@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Fade } from "react-awesome-reveal";
+import { Zoom, Fade } from "react-awesome-reveal";
 import IMAGES from "../../images/index";
 
 export default function Carrousel(props) {
@@ -20,18 +20,18 @@ export default function Carrousel(props) {
   }, [current, length]);
 
   return (
-    <div>
+    <Zoom triggerOnce>
       {props.slides.map((slide, index) => {
         return (
           <div key={index}>
             {index === current && (
-              <Fade duration="2000">
+              <Fade duration={2000}>
                 <img src={IMAGES[props.projectName][slide]} alt={slide}></img>
               </Fade>
             )}
           </div>
         );
       })}
-    </div>
+    </Zoom>
   );
 }
