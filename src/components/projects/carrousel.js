@@ -20,18 +20,18 @@ export default function Carrousel(props) {
   }, [current, length]);
 
   return (
-    <Zoom triggerOnce>
+    <div>
       {props.slides.map((slide, index) => {
         return (
           <div key={index}>
             {index === current && (
-              <Fade duration={2000}>
+              <Fade duration={1000}>
                 <img src={IMAGES[props.projectName][slide]} alt={slide}></img>
               </Fade>
             )}
           </div>
         );
       })}
-    </Zoom>
+    </div>
   );
 }

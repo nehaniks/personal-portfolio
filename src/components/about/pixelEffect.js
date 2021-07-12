@@ -20,8 +20,8 @@ function particle(canvas, color, fontSize) {
 
   context.fillStyle = color;
   context.font = `900 ${fontSize}rem Nunito`;
-  context.fillText("Neha", `${fontSize * 4}`, `${canvas.height * 0.4}`);
-  context.fillText("Nikhat", `${fontSize * 4}`, `${canvas.height * 0.82}`);
+  context.fillText("N", `${fontSize * 1}`, `${canvas.height * 0.6}`);
+  context.fillText("N", `${fontSize * 6}`, `${canvas.height * 0.9}`);
 
   const textCoordinates = context.getImageData(
     0,
@@ -116,17 +116,17 @@ export default function PixelEffect() {
 
   const dimension = () => {
     if (window.innerWidth > 768) {
-      canvasRef.current.width = 550;
-      canvasRef.current.height = 150;
-      setFontSize(4);
+      canvasRef.current.width = 250;
+      canvasRef.current.height = 250;
+      setFontSize(12);
     } else if (window.innerWidth > 640) {
-      canvasRef.current.width = 300;
-      canvasRef.current.height = 125;
-      setFontSize(3);
+      canvasRef.current.width = 200;
+      canvasRef.current.height = 200;
+      setFontSize(10);
     } else if (window.innerWidth < 640) {
       canvasRef.current.width = 150;
-      canvasRef.current.height = 100;
-      setFontSize(2.25);
+      canvasRef.current.height = 150;
+      setFontSize(7);
     }
   };
 
@@ -144,7 +144,7 @@ export default function PixelEffect() {
   });
 
   return (
-    <div>
+    <div className="bg-gray-200 dark:bg-gray-800 rounded-3xl">
       <canvas ref={canvasRef} onMouseMove={mousePosition}></canvas>
     </div>
   );

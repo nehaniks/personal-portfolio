@@ -34,7 +34,7 @@ export default function Navbar() {
 
   const renderItem = (item) => (
     <h1
-      className="my-12 p-2 mr-2 font-black text-2xl md:text-4xl text-gray-900 dark:hover:text-white hover:bg-white dark:hover:bg-gray-900 cursor-pointer rounded-r-3xl"
+      className="mt-12 p-1 pr-4 font-black text-sm md:text-lg text-gray-900 dark:hover:text-white hover:bg-white dark:hover:bg-gray-900 cursor-pointer rounded-r-3xl"
       button
       onClick={() => scrollToElement(item.where)}
       key={item.where}
@@ -64,7 +64,7 @@ export default function Navbar() {
         )}
       </div>
       {showNav ? (
-        <div className="fixed right-0 z-50 w-1/2 md:w-1/5 h-screen bg-gray-200">
+        <div className="fixed right-0 z-50 w-1/4 md:w-1/12 h-screen bg-gray-200">
           <button
             onClick={() => {
               closeNav();
