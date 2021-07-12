@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Zoom, Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import IMAGES from "../../images/index";
 
 export default function Carrousel(props) {
